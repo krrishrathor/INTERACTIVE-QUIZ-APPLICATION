@@ -62,3 +62,7 @@ This kind of quiz application can serve multiple real-world use cases:
     Trivia Games: Extendable into full-fledged trivia or educational games.
 
     Surveys/Quizzes for Blogs or Businesses: Can be adapted for customer feedback, satisfaction quizzes, or even market research.
+
+
+*OUTPUT*: QUIZ APP
+<img width="1470" alt="Image" src="https://github.com/user-attachments/assets/be32cd59-03a6-4002-9c59-b358b11558d6" />
