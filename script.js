@@ -4,6 +4,8 @@ const resultElement = document.getElementById("result");
 const nextButton = document.getElementById("next-btn");
 const scoreDisplay = document.getElementById("score");
 const progressBar = document.getElementById("progress-fill");
+const restartButton = document.getElementById("restart-btn");
+
 
 let currentQuestion = 0;
 let score = 0;
@@ -69,11 +71,21 @@ function nextQuestion() {
 }
 
 function showResult() {
-    questionElement.innerText = "Quiz Complete!";
-    answersElement.innerHTML = "";
-    resultElement.innerText = `Final Score: ${score}/${questions.length}`;
-    nextButton.style.display = "none";
+  questionElement.innerText = "Quiz Complete!";
+  answersElement.innerHTML = "";
+  resultElement.innerText = `Final Score: ${score}/${questions.length}`;
+  nextButton.style.display = "none";
+  restartButton.style.display = "block";
 }
+
+function restartQuiz() {
+  currentQuestion = 0;
+  score = 0;
+  scoreDisplay.innerText = `Score: 0`;
+  restartButton.style.display = "none";
+  loadQuizData(); 
+}
+
 
 function updateProgressBar() {
     let percent = ((currentQuestion + 1) / questions.length) * 100;
@@ -87,5 +99,7 @@ function decodeHTML(str) {
 }
 
 nextButton.addEventListener("click", nextQuestion);
+restartButton.addEventListener("click", restartQuiz);
+
 
 loadQuizData();
